@@ -1,0 +1,76 @@
+.--light {
+    background-color: transparent ;
+    position: absolute;
+    width: calc(100vw - 0px);
+    top: 0px;
+    left: 0px;
+    z-index: 5000; }
+.devided--light {
+    background-color: #E8E8E8 ; }
+    .devided--light a {
+        color: #414141 ;
+        border: 1px solid #1F1F1F ;
+        padding: 20px 60px; }
+    .header__burger--light span:before, .header__burger--light span:after {
+        background: #414141 ; }
+    .header__burger--light span {
+        background: #1F1F1F ; }
+    .aside--light {
+        border-bottom-color: #303030 ; }
+    .aside--light a {
+        color: #515151 ; }
+.home__meeting-neck--light {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; }
+    .home__meeting-neck--light:before {
+        background-image: url(../assets/dark/background_light.png); }
+    .home__content-lead--light {
+        color: #414141 ; }
+    .home__content-title--light, .home__about-title--light, .home__blog-title-text--light, .home__contacts-title-text--light {
+        color: #414141 ; }
+    .home__blog-preview-title--light {
+        color: #414141 ; }
+    .home__about-lead--light {
+        color: #414141 ; }
+    .home__about__skills-title--light {
+        color: #414141 ; }
+    .skills--light {
+        color: #414141 ; }
+    .skills__progress--light {
+        background-color: #CFCFCF; }
+    .skills__bar--light {
+        background-color: #414141; }
+    .home__blog-preview-date--light {
+        color: #414141 ; }
+    .home__blog-preview-text--light, .home__contacts-content-text--light, .home__contacts-geo--light, .home__contacts-info--light, .home__contacts-mail--light, .home__contacts-content-tel--light {
+        color: #414141 ; }
+    .home__blog-preview-date--light {
+        color: #414141 ; }
+    .field__input--light, .field__textarea--light {    
+        background-color: #CFCFCF; }
+    .field__label--light {
+       color: #414141 ; }
+    .footer-wrapper--light a {
+        color: #616161 ; }
+    .footer--light {
+        color: #616161;
+        background-image: linear-gradient(180deg, rgba(232, 232, 232, 0) 0%, rgba(232, 232, 232, 0.6) 32%, rgba(232, 232, 232, 0.7) 38%, rgba(232, 232, 232, 0.9) 60%, #E8E8E8 76%); }
+    .footer--light .footer_text--light {
+        color: #515151; }
+    .footer__dash--light:before {
+        border-bottom: 1px solid #414141 ; }
+    .btn--light {
+        color: #616161 ; }
+    .modal--light {
+        background-color: #E8E8E8;
+    }
+    .modal--light a {
+        font-family: "Oswald", sans-serif;
+        color: #414141 !important;       
+    }
+    

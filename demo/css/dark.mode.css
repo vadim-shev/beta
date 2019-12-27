@@ -1,0 +1,95 @@
+
+.--dark {
+    background-color: transparent ;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+    left: 0;
+    top: 0; }
+.devided--dark {
+	background-color: #1F1F1F; }
+    .devided--dark a {
+    	color: #BEBEBE ;
+    	padding: 20px 60px;
+    	border: 1px solid #E8E8E8; }
+    .devided--dark a{
+    	color: #909090 ;
+    	border: 1px solid #1F1F1F ; }
+.header__burger--dark span:before, 
+.header__burger--dark span:after {
+    background: #909090 ; }
+    .header__burger--dark span {
+    	background: #909090 ; }
+    .aside--dark {
+    	border-bottom-color: #1F1F1F ; }
+    .aside--dark a {
+    	color: #AAAAAA ; }
+.home__meeting-neck--dark:before {
+    z-index: -1;
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(31, 31, 31, 0.9);
+    left: -15px;
+    top: 0;
+    right: -10px;
+    height: 100vh;
+    background-position: left;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(../assets/dark/background_dark.png) ; }
+    .home__content-lead--dark {
+        color: #909090 ; }
+    .btn--dark {
+        border-color: #909090 ;
+        color: #AAAAAA; }
+    .home__content-title--dark,
+    .home__about-title--dark,
+    .home__blog-title-text--dark,
+    .home__contacts-title-text--dark {
+    	color: #BEBEBE ; }
+    .home__blog-preview-title--dark {
+        color: #ADADAD ; }
+    .home__about-lead--dark {
+        color: #BEBEBE ; }
+    .home__about__skills-title--dark {
+        color: #909090 ; }
+    .skills--dark {
+        color: #909090 ; }
+    .skills__progress--dark {
+        background-color: #303030 !important; }
+    .skills__bar--dark {
+        width: 1%;
+        height: 4px;
+        background-color: #909090 !important; }
+    .home__blog-preview-date--dark {
+        color: #909090; }
+    .home__blog-preview-text--dark,
+    .home__contacts-content-text--dark,
+    .home__contacts-info--dark,
+    .home__contacts-geo--dark,
+    .home__contacts-mail--dark,
+    .home__contacts-content-tel--dark {
+        color: #909090; }
+    .home__blog-preview-date--dark {
+        color: #909090 ; }
+    .field__input--dark, 
+    .field__textarea--dark {
+        background-color: #303030; }
+    .field__label--dark {
+       color: #909090 ;   }
+    .footer-wrapper--dark a {
+        color: #909090 ; }
+    .footer--dark {
+        background-image: linear-gradient(-180deg, rgba(31, 31, 31, 0) 0%, rgba(31, 31, 31, 0.6) 22%, rgba(31, 31, 31, 0.7) 36%, rgba(31, 31, 31, 0.9) 55%, #1F1F1F 76%); }
+    .footer__dash--dark:before {
+        border-bottom-color: #909090 ; }
+    .footer__dash--dark:before {
+        border-bottom: 1px solid #E8E8E8 ; }
+    .modal--dark {
+        background-color: #1F1F1F; }
+    .modal--dark a {
+        color: #AAAAAA !important; }

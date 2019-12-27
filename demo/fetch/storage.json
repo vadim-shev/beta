@@ -1,0 +1,62 @@
+{
+	"notice": {
+		"default": {
+			"font_d": "defaultFontD--js",
+			"edge_d": "defaultBorderD--js",
+			"font_l": "defaultFontL--js",
+			"edge_l": "defaultBorderL--js",
+			"_copyCursor": "defaultCopyCursor--js"
+		},
+		"access": {
+			"font": "accessFont--js",
+			"edge": "accessBorder--js"
+		},
+		"error": {
+			"font": "errorFont--js",
+			"edge": "errorBorder--js"
+		}
+	},
+	"state": {
+		"active": "isActive",
+		"waiting": "isPending"
+	},
+	"move": {
+		"bar": "burger--js",
+		"labeL": "labelMove--js"
+	},
+	"var": {
+		"btn_key_dark": "btn--dark",
+		"btn_key_light": "btn--light",
+		"btn_submit": "btn-contacts",
+		"copy_key": "copyState",
+		"side_key": "aside__link",
+		"icon_key": "footer_icon",
+		"bread_crumps": "header__burger--dark",
+		"input_field": "field__input",
+		"area_field": "field__textarea",
+		"name_label": "name__label",
+		"mail_label": "email__label",
+		"message_label": "message__label",
+		"name_field": "name",
+		"mail_field": "email",
+		"message_field": "message",
+		"bar": {
+			"ui": {
+				"el": ".ui__bar",
+				"val": ".ui__value"
+			},
+			"ux": {
+				"el": ".ux__bar",
+				"val": ".ux__value"
+			},
+			"w3c": {
+				"el": ".w3c__bar",
+				"val": ".w3c__value"
+			},
+			"js": {
+				"el": ".js__bar",
+				"val": ".js__value"
+			}
+		}
+	}	
+}

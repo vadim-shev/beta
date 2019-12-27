@@ -1,0 +1,13 @@
+{
+	"DataBase": {
+		"type": "firebase",
+		"api_key": "AIzaSyCWADWvPUQDrp3wYfyGqRGlYcKk_yaihRU",
+		"auth_domain": "tentative-web.firebaseapp.com",
+		"data_base_url": "https://tentative-web.firebaseio.com",
+		"project_id": "tentative-web",
+		"storage_bucket": "tentative-web.appspot.com",
+		"messaging_sender_id": "995843856822",
+		"app_id": "1:995843856822:web:548dbfb70157f894e38917",
+		"measurement_id": "G-MWC89TJX55"
+	}
+}

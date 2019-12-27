@@ -1,0 +1,114 @@
+
+/**/
+/**/
+/**/
+/* ====================================================
+  State: is-pending; */
+/* ==================================================== */
+/**/
+/**/
+/**/
+.share,
+.footer__dash,
+.footer__dash:before,
+.icon_instagram,
+.field__label,
+.copyright,
+.icon_github,
+.icon_behance,
+.aside__link,
+.home__contacts-mail,
+.home__contacts-content-tel,
+.footer__mail-link,
+.footer__tel-link {
+    -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+    -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+    transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out; }
+
+
+/**/
+/**/
+/**/
+/* ====================================================
+  State: is-active; */
+/* ==================================================== */
+/**/
+/**/
+/**/
+.burger--js {
+    color: #FFFFFF !important;
+    width: 0px !important; }
+    .burger--js:before { 
+        transform: rotate(45deg) translate(5px, 6px); }
+    .burger--js:after {
+        color: #FFFFFF !important;
+        transform: rotate(-45deg) translate(5px, -6px); }
+.defaultFontD--js {
+    color: #FFFFFF !important;
+    -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out; }
+    .defaultFontD--js:before {
+        background-color: #FFFFFF !important;
+        -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out; }
+    .defaultBorderD--js { 
+        border-color: #FFFFFF !important;
+        -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out; }
+.defaultFontL--js {
+    color: #000000 !important;
+    -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out; }
+    .defaultFontL--js:before {
+        background-color: #000000 !important;
+        -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out; }
+    .defaultBorderL--js { 
+        border-color: #000000 !important;
+        -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out; }
+    .defaultCopyCursor--js { 
+        cursor: copy; }
+.errorFont--js { 
+    color: #FF0000 !important;
+    -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out; }
+        .errorBorder--js { 
+        border-color: #FF0000 !important;
+        -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out; }
+.accessFont--js { 
+    color: #00FF00 !important;
+    -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+    transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out; }
+        .accessBorder--js { 
+        border-color: #00FF00 !important;
+        -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out;
+        transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out; }
+.labelMove--js {
+    transform: translate(-10px,-30px) !important;
+    -webkit-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+    -o-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out;
+    transition: color 0.3s ease-out, border-color 0.3s ease-out, background-color 0.3s ease-out, transform 0.3s ease-out; }

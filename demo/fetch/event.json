@@ -1,0 +1,10 @@
+{
+	"source": {
+		"ready": "load",
+		"clc": "click"
+	},
+	"focus": {
+		"sooth": "focus",
+		"lie": "blur"
+	}
+}
