@@ -11,115 +11,38 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 /* Otherwise just put the config content (json): */
 
-particlesJS('particles-js',
-    {
-        "particles": {
-            "number": {
-                "value": 80,
-                "density": {
-                    "enable": true,
-                    "value_area": 2000
-                }
-            },
-            "color": {
-                "value": "#BEBEBE"
-            },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#BEBEBE"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                },
-                "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
-                }
-            },
-            "opacity": {
-                "value": 1,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 0.1,
-                    "opacity_min": 0.3,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 10,
-                "random": true,
-                "anim": {
-                    "enable": true,
-                    "speed": 1,
-                    "size_min": 0.1,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": false,
-                "distance": 500,
-                "color": "#ffffff",
-                "opacity": 0.4,
-                "width": 2
-            },
-            "move": {
-                "enable": true,
-                "speed": 4,
-                "direction": "bottom",
-                "random": true,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                "enable": true,
-                "mode": "push"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "repulse"
-            },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 200,
-                    "line_linked": {
-                        "opacity": 0.5
-                    }
-                },
-                "bubble": {
-                    "distance": 200,
-                    "size": 4,
-                    "duration": 0.1,
-                    "opacity": 1,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 200,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
-            }
-        },
-        "retina_detect": true
-    }
-);
+particlesJS.load('particles-js', 'particles.json', function(data) {
+  console.log('particles.js loaded - callback');
+
+  document.querySelector('.btn-contacts').onmouseenter = () => {
+    setTimeout(() => {
+        window.pJSDom[0].pJS.particles.color.rgb.r = '255'
+      window.pJSDom[0].pJS.particles.color.rgb.g = '0'
+      window.pJSDom[0].pJS.particles.color.rgb.b = '0'
+    }, 500)
+    setTimeout(() => {
+
+      window.pJSDom[0].pJS.particles.move.speed = '3'
+    }, 100)
+      
+  }
+  document.querySelector('.btn-contacts').onmouseleave = () => {
+    setTimeout(() => {
+      window.pJSDom[0].pJS.particles.color.rgb.r = '255'
+      window.pJSDom[0].pJS.particles.color.rgb.g = '255'
+      window.pJSDom[0].pJS.particles.color.rgb.b = '255'
+    }, 500)
+    setTimeout(() => {
+
+      window.pJSDom[0].pJS.particles.move.speed = '60'
+    }, 10)
+    setTimeout(() => {
+
+      window.pJSDom[0].pJS.particles.move.speed = '6'
+    }, 1000)
+
+  }
+  
+    console.log(window.pJSDom[0].pJS.particles.color.rgb.r);
+  
+});
