@@ -27,7 +27,7 @@ const pJS = function(tag_id, params){
                 }
             },
             color: {
-                value: '#000'
+                value: '#F00'
             },
             shape: {
                 type: 'circle',
@@ -67,7 +67,7 @@ const pJS = function(tag_id, params){
             line_linked: {
                 enable: true,
                 distance: 100,
-                color: '#000',
+                color: '#FFF',
                 opacity: 1,
                 width: 1
             },

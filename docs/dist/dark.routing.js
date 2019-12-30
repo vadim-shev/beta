@@ -1,6 +1,7 @@
 var burger = document.querySelector('.header__burger--dark') 
 
 
+
 const DarkMode = { 
 	data: function() {
 		return {
@@ -498,53 +499,77 @@ const DarkMode = {
  			window.scrollY > 50 ? el.setAttribute("style", "opacity: 1; transform: translate3d(0, -10px, 0)") : false
     		return window.scrollY > 100
     	},
-    	handleHover: function( { target } ) {			
-    		fetch(_Fetch.Store).then(status).then(json).then( $py => { var self = this
-				target && _hasClass(target, $py.var.btn_key_dark) ? (
-					addClass(target, $py.notice.default.font_d), addClass(target,  $py.notice.default.edge_d)
-				):( target && _hasClass(target, $py.var.copy_key) ) ? ( 
-					addClass(target, $py.notice.default.font_d)
-				):( target && _hasClass(target, $py.var.icon_key) ) ? ( 
-					addClass(target, $py.notice.default.font_d)
-				):( target && _hasClass(target, $py.var.side_key) ) ? (
-					addClass(target, $py.notice.default.font_d)
-				):( target == burger ) ? ( addClass(bar, $py.move.bar) ):( false ) 
-				let el = document.querySelector('.btn-contacts')
-				_hasClass(target, $py.var.btn_submit) && !!self.validation.name !== true ? (
-					addClass(el, $py.notice.error.font), addClass(el, $py.notice.error.edge),
-					removeClass(el, $py.notice.access.font), removeClass(el, $py.notice.access.edge)
-				):( _hasClass(target, $py.var.btn_submit) && !!self.validation.email !== true ) ? (
-					addClass(el, $py.notice.error.font), addClass(el, $py.notice.error.edge),
-					removeClass(el, $py.notice.access.font), removeClass(el, $py.notice.access.edge)
-				):( _hasClass(target, $py.var.btn_submit)&& !!self.validation.message !== true ) ? (
-					addClass(el, $py.notice.error.font), addClass(el, $py.notice.error.edge),
-					removeClass(el, $py.notice.access.font), removeClass(el, $py.notice.access.edge)
-				):( !_hasClass(target, $py.var.btn_submit) ) ? ( false ):( 
-					addClass(el, $py.notice.access.font), addClass(el, $py.notice.access.edge) )						
-			}).catch( error => { console.log('Request failed', error) } )		
+    	handleHover: function( { target } ) { let pJ$ = window.pJSDom[0].pJS.particles 		
+    		console.time("MyTimer")
+    		fetch(_Fetch.Store).then(status).then(json).then( $py => { var self = this; let el = document.querySelector('.btn-contacts')
+
+				!_hasClass(target, $py.var.btn_submit)? (
+					pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '255', pJ$.color.rgb.b = '255',
+					pJ$.move.speed = '6',
+					addClass(target, $py.notice.default.font_d),
+					addClass(target, $py.notice.default.edge_d)) 
+				: ( false )
+				
+
+
+
+				target == el && !!self.validation.name !== true && !!self.validation.email !== true && !!self.validation.message !== true 
+				? (
+					addClass(el, $py.notice.error.font), 
+					addClass(el, $py.notice.error.edge), 
+					pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '0', pJ$.color.rgb.b = '0',
+					pJ$.move.speed = '2') 
+	    				
+    			: (
+    				pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '255',pJ$.color.rgb.b = '255',
+					pJ$.move.speed = '6') 
+				
+
+					
+
+								
+			}).catch( error => { console.log('Request failed', error) } )	
+
+
+			 console.timeEnd("MyTimer")   	
     	},
-    	shutdownHover: function({ target }) {
+    	shutdownHover: function({ target }) { let pJ$ = window.pJSDom[0].pJS.particles
     		fetch(_Fetch.Store).then(status).then(json).then( $py => { var self = this
-				target && _hasClass(target, $py.var.btn_key_dark) ? (
-					removeClass(target, $py.notice.default.font_d), removeClass(target,  $py.notice.default.edge_d)
-				):( target && _hasClass(target, $py.var.copy_key) ) ? ( 
-					removeClass(target, $py.notice.default.font_d)
-				):( target && _hasClass(target, $py.var.icon_key) ) ? ( 
-					removeClass(target, $py.notice.default.font_d)
-				):( target && _hasClass(target, $py.var.side_key) ) ? (
-					removeClass(target, $py.notice.default.font_d)
-				):( target == burger ) ? ( removeClass(bar, $py.move.bar) ):( false ) 	
+
+				_hasClass(target, $py.var.btn_key_dark) && !_hasClass(target, $py.var.btn_submit) ? (
+					pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '255', pJ$.color.rgb.b = '255',
+					pJ$.move.speed = '6') 
+				: ( false )
+				
+
 				let el = document.querySelector('.btn-contacts')	
-				_hasClass(target, $py.var.btn_submit) && !!self.validation.name !== true ? (
-					removeClass(el, $py.notice.error.font), removeClass(el, $py.notice.error.edge),
-					removeClass(el, $py.notice.access.font), removeClass(el, $py.notice.access.edge)
-				):( _hasClass(target, $py.var.btn_submit) && !!self.validation.email !== true ) ? (
-					removeClass(el, $py.notice.error.font), removeClass(el, $py.notice.error.edge),
-					removeClass(el, $py.notice.access.font), removeClass(el, $py.notice.access.edge)
-				):( _hasClass(target, $py.var.btn_submit) && !!self.validation.message !== true ) ? (
-					removeClass(el, $py.notice.error.font), removeClass(el, $py.notice.error.edge),
-					removeClass(el, $py.notice.access.font), removeClass(el, $py.notice.access.edge)
-				):( !_hasClass(target, $py.var.btn_submit) ) ? ( false ):( removeClass(el, $py.notice.access.font), removeClass(el, $py.notice.access.edge) )											
+
+				_hasClass(target, $py.var.btn_submit) && target == el ? (
+					removeClass(el, $py.notice.error.font), 
+					removeClass(el, $py.notice.error.edge), 
+					pJ$.color.rgb.r = '255', 
+					pJ$.color.rgb.g = '255', 
+					pJ$.color.rgb.b = '255',
+					pJ$.move.speed = '2',
+					pJ$.move.straight = false) 
+					: (_hasClass(target, $py.var.btn_submit) && target == el) ? (
+						addClass(el, $py.notice.access.font), addClass(el, $py.notice.access.edge),
+						pJ$.color.rgb.r = '255', 
+						pJ$.color.rgb.g = '255',
+						pJ$.color.rgb.b = '255',
+						pJ$.move.speed = '60')
+	    			: (target !== el && !_hasClass(target, $py.var.btn_submit)) ? (
+	    				addClass(el, $py.notice.default.font_d),
+						pJ$.color.rgb.r = '255', 
+						pJ$.color.rgb.g = '255',
+						pJ$.color.rgb.b = '255',
+						pJ$.move.speed = '6') 
+    			: (
+    				pJ$.color.rgb.r = '255', 
+					pJ$.color.rgb.g = '255',
+					pJ$.color.rgb.b = '255',
+					pJ$.move.speed = '6') 
+
 			}).catch( error => { console.log('Request failed', error) } )
     	},
     	clipboard: ( { target } ) => {			
