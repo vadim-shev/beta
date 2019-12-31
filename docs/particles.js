@@ -1485,12 +1485,12 @@ window.particlesJS = function(tag_id, params){
     /* no string id? so it's object params, and set the id with default id */
     if(typeof(tag_id) != 'string'){
         params = tag_id;
-        tag_id = 'particles-js';
+        tag_id = 'app';
     }
 
     /* no id? set the id to default id */
     if(!tag_id){
-        tag_id = 'particles-js';
+        tag_id = 'app';
     }
 
     /* pJS elements */
@@ -1511,7 +1511,9 @@ window.particlesJS = function(tag_id, params){
 
     /* set size canvas */
     canvas_el.style.width = "100%";
-    canvas_el.style.height = "100%";
+    canvas_el.style.height = document.querySelector('.--dark').offsetHeight;
+
+    console.log(document.querySelector('.--dark').offsetHeight);
 
     /* append canvas */
     var canvas = document.getElementById(tag_id).appendChild(canvas_el);

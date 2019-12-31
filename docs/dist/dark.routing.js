@@ -13,8 +13,25 @@ const DarkMode = {
 			showModal: false,
 			mail: "vadim.shevchenko2016@gmail.com",
 			phone: "+38 (097) 88-33-510",
-			intro: "intro",
-			Experiences: "Protons give an atom its identity, electrons its personality. - Bill Bryson, A short history of nearly everything"
+			intro: "let\'s get know me",
+			Meet: `My name is Vadim Shevchenko. 
+					I\'m a Juniour web developer with a passion for developing applications that have potential to increase productivity and save time.
+					Seeking an opportunity to utilize my education and training while working with a team that will require me grow my skills and creativity as a developer.
+					`,
+			Skills: {
+				design: "UI & Web Design",
+				front: "Front-End",
+				back: "Back-End",
+				other: "Other"
+			},
+			Experiences: `
+				Vadim exists somewhere between UI Designer and Front-End developer.
+				Currently working in Cherkasy, he specializes in conceptual thinking and playful ideas.
+				Outside of creating custom websites, Vadim loves to collaborate with creative friends whenever he has the time.
+				He probably wants to collaborate with you too.
+				He also wrote this in third person because he wanted it to sound fancy.
+				He thinks it does sound fancy.
+			`
 		}
 	},
 	template: `
@@ -24,7 +41,7 @@ const DarkMode = {
 					<label for="menu-burger"  
 						id="show-modal" 
 						@click="modalShow" 
-						class="header__burger header__burger--dark" 
+						class="header__burger header__burger--dark btn--dark" 
 						@mouseenter="handleHover" @mouseleave="shutdownHover">
 						<span @mouseenter="handleHover" @mouseleave="shutdownHover" class="bar" ></span>
 					</label>
@@ -39,17 +56,17 @@ const DarkMode = {
 			<aside class="aside aside--dark">
 				<nav class="aside__nav">
 					<div class="aside__nav-item">
-						<a href="https://www.instagram.com/vadim.shev_/" target="_blank" class="aside__link instagram" rel="instagram" @mouseenter="handleHover" @mouseleave="shutdownHover" >instagram</a>
+						<a href="https://www.instagram.com/vadim.shev_/" target="_blank" class="aside__link instagram btn--dark" rel="instagram" @mouseenter="handleHover" @mouseleave="shutdownHover" >instagram</a>
 					</div>
 					<div class="aside__nav-item">
-						<a href="https://github.com/vadim-shev" target="_blank" class="aside__link git" rel="git" @mouseenter="handleHover" @mouseleave="shutdownHover">github</a>
+						<a href="https://github.com/vadim-shev" target="_blank" class="aside__link git btn--dark" rel="git" @mouseenter="handleHover" @mouseleave="shutdownHover">github</a>
 					</div>
 					<div class="aside__nav-item">
-						<a href="https://www.behance.net/vadimshevcd5b9" target="_blank" class="aside__link behance" rel="behance" @mouseenter="handleHover" @mouseleave="shutdownHover">behance</a>
+						<a href="https://www.behance.net/vadimshevcd5b9" target="_blank" class="aside__link behance btn--dark" rel="behance" @mouseenter="handleHover" @mouseleave="shutdownHover">behance</a>
 					</div>
 				</nav>
 			</aside>
-			<main class="home">
+			<main class="home" id="dark">
 				<section class="home__meeting">
 					<div class="home__meeting-neck home__meeting-neck--dark"></div>
 					<div class="home__layout">
@@ -62,7 +79,7 @@ const DarkMode = {
 								</div>
 								<div class="home__content__lead">
 									<p class="home__content-lead home__content-lead--dark">							
-										{{ Experiences }}
+										{{ Meet }}
 									</p>
 								</div>
 							</div>
@@ -162,7 +179,7 @@ const DarkMode = {
 							</div>
 
 							<div class="portfolio__more">
-								<button class="btn btn--dark btn-portfolio" @mouseenter="handleHover" @mouseleave="shutdownHover">show more</button>
+								<router-link :to="{ path: 'dark/work' }" class="btn btn--dark btn-portfolio" @mouseenter="handleHover" @mouseleave="shutdownHover">show more</router-link>
 							</div>
 						</div>
 					</div>
@@ -173,12 +190,12 @@ const DarkMode = {
 							<div class="home__about-content">
 								<div class="home__about__title">
 									<h2 class="home__about-title home__about-title--dark">
-										about me
+										About me
 									</h2>
 								</div>								
 								<div class="home__about__lead">
 									<p class="home__about-lead home__about-lead--dark">			
-										The idea of beauty is the fundamental idea of everything. In the world we see only distortions of the fundamental idea, but art, by imagination, may lift itself to the height of this idea. Art is therefore akin to creation.
+										{{ Experiences }}
 									</p>
 								</div>
 								<div class="home__about__image">
@@ -190,31 +207,31 @@ const DarkMode = {
 									</h3>
 									<ul class="skills skills--dark">
 										<li class="skill__item">
-											<div class="skills__title ui" @click.once="progress">UI & Web Design</div>
+											<div class="skills__title ui" @click.once="progress">{{ Skills.design }}</div>
 											<div class="ui__value"></div>
 											<div class="skills__progress skills__progress--dark">
 												<div class="skills__bar skills__bar--dark ui__bar"></div>
 											</div>
 										</li>
 										<li class="skill__item">
-											<div class="skills__title ux"  @click.once="progress">UX</div>
-											<div class="ux__value"></div>
-											<div class="skills__progress skills__progress--dark">
-												<div class="skills__bar skills__bar--dark ux__bar" ></div>
-											</div>
-										</li>
-										<li class="skill__item">
-											<div class="skills__title w3c" @click.once="progress">HTML & CSS</div>
+											<div class="skills__title w3c" @click.once="progress">{{ Skills.front }}</div>
 											<div class="w3c__value"></div>
 											<div class="skills__progress skills__progress--dark">
 												<div class="skills__bar skills__bar--dark w3c__bar"></div>
 											</div>
 										</li>
 										<li class="skill__item">
-											<div class="skills__title js" @click.once="progress">Javascript</div>
+											<div class="skills__title js" @click.once="progress">{{ Skills.back }}</div>
 											<div class="js__value"></div>
 											<div class="skills__progress skills__progress--dark">
 												<div class="skills__bar skills__bar--dark js__bar"></div>
+											</div>
+										</li>
+										<li class="skill__item">
+											<div class="skills__title ux"  @click.once="progress">{{ Skills.other }}</div>
+											<div class="ux__value"></div>
+											<div class="skills__progress skills__progress--dark">
+												<div class="skills__bar skills__bar--dark ux__bar" ></div>
 											</div>
 										</li>
 									</ul>
@@ -228,9 +245,9 @@ const DarkMode = {
 						<div class="home__blog__content">
 							<div class="home__blog-wrapper">
 								<div class="home__blog-title home__blog-title--hidden">
-									<a href="#" class="home__blog-link btn--hidden btn btn--dark">view all post</a>
+									<router-link  :to="{ path: '/dark/blog' }" class="home__blog-link btn--hidden btn btn--dark">view all post</router-link>
 								</div>
-								<a href="#" class="home__blog-preview">
+								<router-link :to="{ path: '/dark/blog' }" class="home__blog-preview">
 									<div class="home__blog-preview-img">
 										<img src="assets/dark/blog_prev.jpg" class="blog__pic"/>
 									</div>
@@ -243,10 +260,10 @@ const DarkMode = {
 									<p class="home__blog-preview-date home__blog-preview-date--dark">
 										Jan 23, 2018				
 									</p>
-								</a>
+								</router-link>
 								<div class="home__blog-title">
 									<h2 class="home__blog-title-text home__blog-title-text--dark">new <br/> in blog</h2>
-									<a href="#" class="home__blog-link btn btn--dark btn-blog" @mouseenter="handleHover" @mouseleave="shutdownHover">view all post</a>
+									<router-link  :to="{ path: '/dark/blog' }" class="home__blog-link btn btn--dark btn-blog" @mouseenter="handleHover" @mouseleave="shutdownHover">view all post</router-link>
 								</div>
 							</div>
 						</div>
@@ -273,14 +290,14 @@ const DarkMode = {
 										<a href="mailto:vadim.shevchenko2016@gmail.com" 
 												@click.stop.prevent="clipboard" 
 												@mouseenter="handleHover" @mouseleave="shutdownHover"
-												class="home__contacts-mail home__contacts-mail--dark copyState copy_mail" 
+												class="home__contacts-mail home__contacts-mail--dark copyState copy_mail  btn--dark" 
 												title="Click to copy mail"
 										>
 											{{ mail }}
 											<input type="hidden" id="clipboard" :value="mail">
 										</a>
 										<p class="home__contacts-content-tel home__contacts-content-tel--dark">
-											<a class="home__contacts-content-tel home__contacts-content-tel--dark copyState copy_phone" 
+											<a class="home__contacts-content-tel home__contacts-content-tel--dark copyState copy_phone  btn--dark" 
 												href="#contacts" 
 												@mouseenter="handleHover" 
 												@mouseleave="shutdownHover" 
@@ -300,7 +317,6 @@ const DarkMode = {
 												<input type="text" 
 														class="field__input field__input--dark name" 
 														data-name 
-
 														@focusin="focusField" 
 														@focusout="focusOutField" 
 														v-model="newUser.name" 
@@ -385,21 +401,21 @@ const DarkMode = {
 								<span class="share">Share</span>
 								<span class="footer__dash"></span>
 								<a href="https://www.instagram.com/vadim.shev_/" target="_blank"
-									class="footer_icon icon_instagram"
+									class="footer_icon icon_instagram btn--dark"
 									@mouseenter="handleHover" 
 									@mouseleave="shutdownHover"
 								>
 									<i class="fab fa-instagram"></i>
 								</a>
 								<a href="https://github.com/vadim-shev" target="_blank"
-									class="footer_icon icon_github"
+									class="footer_icon icon_github btn--dark"
 									@mouseenter="handleHover" 
 									@mouseleave="shutdownHover"
 								>
 									<i class="fab fa-github"></i>
 								</a>
 								<a href="https://www.behance.net/vadimshevcd5b9" target="_blank"
-									class="footer_icon icon_behance"
+									class="footer_icon icon_behance btn--dark"
 									@mouseenter="handleHover" 
 									@mouseleave="shutdownHover">
 									<i class="fab fa-behance"></i>
@@ -409,7 +425,7 @@ const DarkMode = {
 						<div class="nopadding">
 							<div class="footer__mail">
 								<a href="mailto:vadim.shevchenko2016@gmail.com" 
-									class="footer__mail-link copyState copy_mail" 
+									class="footer__mail-link copyState copy_mail btn--dark" 
 									@mouseenter="handleHover" 
 									@mouseleave="shutdownHover"
 									@click.stop.prevent="clipboard" 
@@ -423,7 +439,7 @@ const DarkMode = {
 						<div class="nopadding">
 							<div class="footer__tel">
 								<a href="tel:+380978833510" 
-									class="footer__tel-link copyState copy_phone" 
+									class="footer__tel-link copyState copy_phone btn--dark" 
 									@mouseenter="handleHover" 
 									@mouseleave="shutdownHover"
 									@click.stop.prevent="clipboard" 
@@ -499,77 +515,49 @@ const DarkMode = {
  			window.scrollY > 50 ? el.setAttribute("style", "opacity: 1; transform: translate3d(0, -10px, 0)") : false
     		return window.scrollY > 100
     	},
-    	handleHover: function( { target } ) { let pJ$ = window.pJSDom[0].pJS.particles 		
+    	handleHover: function({ target }) { let pJ$ = window.pJSDom[0].pJS.particles 		
     		console.time("MyTimer")
-    		fetch(_Fetch.Store).then(status).then(json).then( $py => { var self = this; let el = document.querySelector('.btn-contacts')
+    		fetch(_Fetch.Store).then(status).then(json).then( $py => { let self = this; let el = document.querySelector('.btn-contacts')
+				target === el ? (
+					!self.validation.name || !self.validation.email || !self.validation.message ? (
+						pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '0', pJ$.color.rgb.b = '0',
+						pJ$.move.speed = '0.5',
+						addClass(el, $py.notice.error.font), addClass(el, $py.notice.error.edge)
+					) : (
+						pJ$.color.rgb.r = '0', pJ$.color.rgb.g = '255', pJ$.color.rgb.b = '0',
+						pJ$.move.speed = '50',
+						addClass(el, $py.notice.access.font), addClass(el, $py.notice.access.edge)
+					)
+				) : (
+					target !== el && _hasClass(target, $py.var.btn_key_dark) ? (
+						pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '255', pJ$.color.rgb.b = '255',
+						pJ$.move.speed = '6',
+						addClass(target, $py.notice.default.font_d), addClass(target, $py.notice.default.edge_d)
+					) : (
+						target === el
+					)
+				)	
 
-				!_hasClass(target, $py.var.btn_submit)? (
-					pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '255', pJ$.color.rgb.b = '255',
-					pJ$.move.speed = '6',
-					addClass(target, $py.notice.default.font_d),
-					addClass(target, $py.notice.default.edge_d)) 
-				: ( false )
-				
 
-
-
-				target == el && !!self.validation.name !== true && !!self.validation.email !== true && !!self.validation.message !== true 
-				? (
-					addClass(el, $py.notice.error.font), 
-					addClass(el, $py.notice.error.edge), 
-					pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '0', pJ$.color.rgb.b = '0',
-					pJ$.move.speed = '2') 
-	    				
-    			: (
-    				pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '255',pJ$.color.rgb.b = '255',
-					pJ$.move.speed = '6') 
-				
-
-					
-
-								
 			}).catch( error => { console.log('Request failed', error) } )	
-
-
-			 console.timeEnd("MyTimer")   	
+			console.timeEnd("MyTimer")   	
     	},
     	shutdownHover: function({ target }) { let pJ$ = window.pJSDom[0].pJS.particles
-    		fetch(_Fetch.Store).then(status).then(json).then( $py => { var self = this
-
-				_hasClass(target, $py.var.btn_key_dark) && !_hasClass(target, $py.var.btn_submit) ? (
-					pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '255', pJ$.color.rgb.b = '255',
-					pJ$.move.speed = '6') 
-				: ( false )
-				
-
-				let el = document.querySelector('.btn-contacts')	
-
-				_hasClass(target, $py.var.btn_submit) && target == el ? (
-					removeClass(el, $py.notice.error.font), 
-					removeClass(el, $py.notice.error.edge), 
-					pJ$.color.rgb.r = '255', 
-					pJ$.color.rgb.g = '255', 
-					pJ$.color.rgb.b = '255',
-					pJ$.move.speed = '2',
-					pJ$.move.straight = false) 
-					: (_hasClass(target, $py.var.btn_submit) && target == el) ? (
-						addClass(el, $py.notice.access.font), addClass(el, $py.notice.access.edge),
-						pJ$.color.rgb.r = '255', 
-						pJ$.color.rgb.g = '255',
-						pJ$.color.rgb.b = '255',
-						pJ$.move.speed = '60')
-	    			: (target !== el && !_hasClass(target, $py.var.btn_submit)) ? (
-	    				addClass(el, $py.notice.default.font_d),
-						pJ$.color.rgb.r = '255', 
-						pJ$.color.rgb.g = '255',
-						pJ$.color.rgb.b = '255',
-						pJ$.move.speed = '6') 
-    			: (
-    				pJ$.color.rgb.r = '255', 
-					pJ$.color.rgb.g = '255',
-					pJ$.color.rgb.b = '255',
-					pJ$.move.speed = '6') 
-
+    		fetch(_Fetch.Store).then(status).then(json).then( $py => { var self = this; let el = document.querySelector('.btn-contacts')
+    			_hasClass(el, $py.notice.access.font) || _hasClass(el, $py.notice.access.edge) || _hasClass(el, $py.notice.error.font) || _hasClass(el, $py.notice.error.font) ? (
+    				removeClass(el, $py.notice.access.font), removeClass(el, $py.notice.access.edge),
+    				removeClass(el, $py.notice.error.font), removeClass(el, $py.notice.error.edge),
+    				pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '255', pJ$.color.rgb.b = '255',
+					pJ$.move.speed = '6'
+    			) : (
+    				target !== el && _hasClass(target, $py.var.btn_key_dark) ? (
+    					removeClass(target, $py.notice.default.font_d), removeClass(target, $py.notice.default.edge_d),
+    					pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '255', pJ$.color.rgb.b = '255',
+						pJ$.move.speed = '6'
+    				) : (
+    					target === el
+    				)
+    			)
 			}).catch( error => { console.log('Request failed', error) } )
     	},
     	clipboard: ( { target } ) => {			
@@ -605,5 +593,3 @@ const DarkMode = {
         }    	
  	}
 }
-
-

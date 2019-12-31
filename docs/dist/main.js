@@ -1,14 +1,15 @@
 
 const router = new VueRouter({
-	mode: 'abstract',
   	routes: [ {
   			path: '/', component: Mode
   		}, { 
 	    	path: '/dark', component: DarkMode
     	}, {
-    		path: '/light', component: LightMode
+    		path: '/dark/blog', component: Bloghub
     	}, {
-    		path: '*'
+    		path: '/dark/work', component: Workhub
+    	}, {
+    		path: '/light', component: LightMode
     	}
 	],
 	watch: {
@@ -16,19 +17,19 @@ const router = new VueRouter({
 		    const toDepth = to.path.split('/').length
 		    const fromDepth = from.path.split('/').length
 		    this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
-		},
-
-
-	},
-
+		}
+	}
 })
+
+particlesJS.load('app', 'particles.json', () => {
+    console.log('particles.js loaded - callback');  
+});
 
 const app = new Vue({ 
  	router,
 }).$mount('#app')
 	
-router.fallback = true
-router.push('/dark')
+
 
 const rightPath = window.location.origin + '/Portfolio/'
 if(window.location.pathname == '/Portfolio/index.html') {
@@ -44,3 +45,13 @@ if(window.location.pathname == '/Portfolio/index.html') {
 } else {		
 }
 
+
+// console.log(router.currentRoute.path)
+// if(router.currentRoute.path === '/dark/blog') {
+// 	document.querySelector('#particles-js').style.height = document.querySelector('.--dark').offsetHeight
+
+// } else {
+// 	document.querySelector('#particles-js').style.height = document.querySelector('.--dark').offsetHeight
+	
+// }
+// console.log(router.forward);

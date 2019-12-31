@@ -6,6 +6,13 @@
     overflow-x: hidden;
     left: 0;
     top: 0; }
+.mode--dark { 
+    background-color: transparent ;
+    width: 100vw;
+    height: auto;
+    overflow-x: hidden;
+    left: 0;
+    top: 0; }
 .devided--dark {
 	background-color: #1F1F1F; }
     .devided--dark a {
