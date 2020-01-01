@@ -30,6 +30,8 @@ body {
     body,  p {
     	font-family: 'Istok Web', sans-serif; }
     a {
+        user-select: none;
+        -webkit-user-drag: none;
     	text-decoration: none; }
     button, input[type="button"], input[type="reset"], input[type="submit"] {
         cursor: pointer;
@@ -51,6 +53,8 @@ body {
     .home__content-title {
     	font-family: "Oswald", sans-serif !important; }
     img {
+        -webkit-user-drag: none;
+        user-select: none;
     	max-width: 320px;
     	max-height: 251px; }
     .btn {

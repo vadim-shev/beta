@@ -179,7 +179,7 @@ const DarkMode = {
 							</div>
 
 							<div class="portfolio__more">
-								<router-link :to="{ path: 'dark/work' }" class="btn btn--dark btn-portfolio" @mouseenter="handleHover" @mouseleave="shutdownHover">show more</router-link>
+								<router-link title="go to my works" :to="{ path: '/work' }" class="btn btn--dark btn-portfolio" @mouseenter="handleHover" @mouseleave="shutdownHover">show more</router-link>
 							</div>
 						</div>
 					</div>
@@ -245,9 +245,9 @@ const DarkMode = {
 						<div class="home__blog__content">
 							<div class="home__blog-wrapper">
 								<div class="home__blog-title home__blog-title--hidden">
-									<router-link  :to="{ path: '/dark/blog' }" class="home__blog-link btn--hidden btn btn--dark">view all post</router-link>
+									<router-link title="go to blog"  :to="{ path: 'blog' }" class="home__blog-link btn--hidden btn btn--dark" append>view all post</router-link>
 								</div>
-								<router-link :to="{ path: '/dark/blog' }" class="home__blog-preview">
+								<router-link  title="go to blog" :to="{ path: 'blog' }" class="home__blog-preview" append>
 									<div class="home__blog-preview-img">
 										<img src="assets/dark/blog_prev.jpg" class="blog__pic"/>
 									</div>
@@ -263,7 +263,7 @@ const DarkMode = {
 								</router-link>
 								<div class="home__blog-title">
 									<h2 class="home__blog-title-text home__blog-title-text--dark">new <br/> in blog</h2>
-									<router-link  :to="{ path: '/dark/blog' }" class="home__blog-link btn btn--dark btn-blog" @mouseenter="handleHover" @mouseleave="shutdownHover">view all post</router-link>
+									<router-link  title="go to blog"  :to="{ path: 'blog' }" class="home__blog-link btn btn--dark btn-blog" @mouseenter="handleHover" @mouseleave="shutdownHover" append>view all post</router-link>
 								</div>
 							</div>
 						</div>
@@ -375,7 +375,7 @@ const DarkMode = {
 										</div>
 										<div class="content">
 											<div class="box">
-												<input type="submit" value="Send message" class="btn btn--dark btn-contacts"  @mouseenter="handleHover" @mouseleave="shutdownHover"/>
+												<input type="submit" value="Send message" class="btn btn--dark btn-contacts" @click="reset" @mouseenter="handleHover" @mouseleave="shutdownHover"/>
 											</div>
 										</div>										
 									</form>
@@ -516,7 +516,6 @@ const DarkMode = {
     		return window.scrollY > 100
     	},
     	handleHover: function({ target }) { let pJ$ = window.pJSDom[0].pJS.particles 		
-    		console.time("MyTimer")
     		fetch(_Fetch.Store).then(status).then(json).then( $py => { let self = this; let el = document.querySelector('.btn-contacts')
 				target === el ? (
 					!self.validation.name || !self.validation.email || !self.validation.message ? (
@@ -527,20 +526,13 @@ const DarkMode = {
 						pJ$.color.rgb.r = '0', pJ$.color.rgb.g = '255', pJ$.color.rgb.b = '0',
 						pJ$.move.speed = '50',
 						addClass(el, $py.notice.access.font), addClass(el, $py.notice.access.edge)
-					)
-				) : (
+					)) : (
 					target !== el && _hasClass(target, $py.var.btn_key_dark) ? (
 						pJ$.color.rgb.r = '255', pJ$.color.rgb.g = '255', pJ$.color.rgb.b = '255',
 						pJ$.move.speed = '6',
 						addClass(target, $py.notice.default.font_d), addClass(target, $py.notice.default.edge_d)
-					) : (
-						target === el
-					)
-				)	
-
-
+					) : ( target === el ) )	
 			}).catch( error => { console.log('Request failed', error) } )	
-			console.timeEnd("MyTimer")   	
     	},
     	shutdownHover: function({ target }) { let pJ$ = window.pJSDom[0].pJS.particles
     		fetch(_Fetch.Store).then(status).then(json).then( $py => { var self = this; let el = document.querySelector('.btn-contacts')
@@ -590,6 +582,15 @@ const DarkMode = {
 			    	):( clearInterval(), i = 0 )			    		
 			    }, 30)}).catch( error => { console.log('Request failed', error) } )	
 		  	}
+        },
+        reset() { let self = this; let el = document.querySelector('.btn-contacts')
+        	!!self.validation.name && !!self.validation.email && !!self.validation.message ? (      	
+        		removeClass(document.querySelector('.name__label'), "labelMove--js"),
+        		removeClass(document.querySelector('.email__label'), "labelMove--js"),
+        		removeClass(document.querySelector('.message__label'), "labelMove--js")
+        	):(false)
+	    	
+ 			
         }    	
  	}
 }

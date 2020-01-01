@@ -1510,8 +1510,11 @@ window.particlesJS = function(tag_id, params){
     canvas_el.className = pJS_canvas_class;
 
     /* set size canvas */
+    canvas_el.style.position = "fixed"
+    canvas_el.style.zIndex = "200"
+    canvas_el.style.top = "0px"
     canvas_el.style.width = "100%";
-    canvas_el.style.height = document.querySelector('.--dark').offsetHeight;
+    canvas_el.style.height = "100%";
 
     console.log(document.querySelector('.--dark').offsetHeight);
 

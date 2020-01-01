@@ -52,23 +52,3 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig)
 
 var usersRef = firebase.database().ref('users')
-
-const Mode = {
-  	template: `
-    	<div class="single">
-			<div class="devided devided--dark">
-				<router-link to="/dark" name="dark">
-					Dark
-				</router-link>
-			</div>
-			<div class="devided devided--light">
-				<router-link to="/light">
-					Light
-				</router-link>
-			</div>
-			<transition name="transitionName" mode="in-out">
-		        <router-view class="child-view"></router-view>
-		    </transition>
-		</div>
- 	`
-}

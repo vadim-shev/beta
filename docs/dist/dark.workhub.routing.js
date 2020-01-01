@@ -7,7 +7,7 @@ data: function() {
 		}
 	},
 	template: `
-		<div v-scroll="handleScroll"  class="--dark" v-cloak >
+		<div  class="--dark"  >
 			<header class="header header--dark" id="header">
 				<div class="container " style="display: flex; flex-direction: row; justify-content: space-between;">
 					<label for="menu-burger"  
