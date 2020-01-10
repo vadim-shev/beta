@@ -46,47 +46,38 @@ const Bloghub = {
 						<h1 class="blog__title blog__title--dark">Blog</h1>
 						<div class="blog__holder">
 							<div class="blog__item__holder">
-								<div class="blog__item">
-									<a class="blog__item-link">
-										<figure class="blog__item">
+								<a class="blog__item">
+										<figure class="blog__item-pic">
 											<img src="css/dark/blog_prev.jpg" class="blog__item-pic" />
 										</figure>
 										<h5 class="blog__item-title">Title</h5>
 										<p class="blog__item-lead ">lead  lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead </p>
 										<p class="blog__item-lead ">Jan 23, 2018</p>		
-									</a>
-								</div>
-								<div class="blog__item">
-									<a class="blog__item-link">
-										<figure class="blog__item">
+								</a>
+								<a class="blog__item">
+										<figure class="blog__item-pic">
 											<img src="css/dark/blog_prev.jpg" class="blog__item-pic" />
 										</figure>
 										<h5 class="blog__item-title">Title</h5>
 										<p class="blog__item-lead ">lead  lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead </p>
 										<p class="blog__item-lead ">Jan 23, 2018</p>		
-									</a>
-								</div>
-								<div class="blog__item">
-									<a class="blog__item-link">
-										<figure class="blog__item">
+								</a>
+								<a class="blog__item">
+										<figure class="blog__item-pic">
 											<img src="css/dark/blog_prev.jpg" class="blog__item-pic" />
 										</figure>
 										<h5 class="blog__item-title">Title</h5>
 										<p class="blog__item-lead ">lead  lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead </p>
 										<p class="blog__item-lead ">Jan 23, 2018</p>		
-									</a>
-								</div>
-								<div class="blog__item">
-									<a class="blog__item-link">
-										<figure class="blog__item">
+								</a>
+								<a class="blog__item">
+										<figure class="blog__item-pic">
 											<img src="css/dark/blog_prev.jpg" class="blog__item-pic" />
 										</figure>
 										<h5 class="blog__item-title">Title</h5>
 										<p class="blog__item-lead ">lead  lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead lead </p>
 										<p class="blog__item-lead ">Jan 23, 2018</p>		
-									</a>
-								</div>
-							</div>
+								</a>
 							<div class="blog__pagination blog__pagination--dark"></div>
 						</div>
 					</div>

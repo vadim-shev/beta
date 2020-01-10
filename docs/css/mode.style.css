@@ -526,68 +526,112 @@
     @media only screen and (min-width: 1280px) {
         .container { width: 1200px; }
         .portfolio__item, .portfolio__grid { padding: 0; margin: 0; position: relative; overflow: hidden; }
-        .portfolio__item { -webkit-flex-basis: 25%; -ms-flex-preferred-size: 25%; flex-basis: 25%; max-width: 25%; } }
-}
-
-@media (max-width: 1920px) {
-    .blog__container { 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        margin-left: 32px;
-        width: calc(100% - 32px);
-        padding-left: 192px;
-        padding-right: 192px; }
-        .blog__title { 
-            text-align: center; }
-        .blog__holder { 
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center; }
-        .blog__item__holder { 
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap; }
-        .blog__item { 
-            flex-basis: 25.33333333%; }
-        .blog__item-link {
-            padding: 10px;
-            cursor: pointer;
-            flex-basis: 33%;
-            max-height: 560px;
-            min-height: 500px; }
-        .blog__item-content {
-            max-height: calc(620px - 380px);
-        }
-        .blog__item-link h5 { 
-         }
-
-        p.blog__item-lead {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 338px;
-            max-height: calc(560px - 380px); }
-        
-}
-@media (min-width: 1280px) {
-    .blog__container { 
-        padding-top: 230px;
-        padding-bottom: 230px; }
-}
-@media (min-width: 1024px) {
-    .blog__container { 
-        padding-top: 192px;
-        padding-bottom: 192px; }
-}
-@media only screen and (min-width: 768px) {
-    .blog__container { 
-        padding-top: 136px;
-        padding-bottom: 136px; }
-}
+        .portfolio__item { -webkit-flex-basis: 25%; -ms-flex-preferred-size: 25%; flex-basis: 25%; max-width: 25%; } } }
+        @media (max-width: 1920px) {
+            .blog__container { 
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                margin-top: 100px;
+                margin-left: 32px;
+                width: calc(100% - 32px);
+                padding-left: 192px;
+                padding-right: 192px; }
+                .blog__title { 
+                    text-align: center; }
+                .blog__holder { 
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center; }
+                .blog__item__holder { 
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-wrap: wrap; }
+                .blog__item { 
+                    margin-bottom: 56px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    -webkit-transition: opacity 0.3s ease-out;
+                    -o-transition: opacity 0.3s ease-out;
+                    -moz-transition: opacity 0.3s ease-out;
+                    transition: opacity 0.3s ease-out;
+                    opacity: 1; }
+                .blog__item-pic { 
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden; }
+                .blog__item-title { 
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start; }
+                .blog__item-pic img { 
+                    display: block;
+                    width: 100% !important;
+                    max-width: 380px;
+                    max-height: 251px;
+                    position: absolute;
+                    top: 0;
+                    left: 0; }
+                .blog__item-link {
+                    width: 100%;
+                    height: 100%;
+                    padding: 10px;
+                    cursor: pointer;
+                    flex-basis: 33.33333333%;
+                    max-height: 560px;
+                    min-height: 500px; }
+                .blog__item-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    max-width: 380px;
+                    max-height: calc(620px - 300px); }
+                .blog__item-lead {
+                    text-align: left;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    max-width: 380px;
+                    max-height: calc(560px - 380px); }
+                .blog__title { 
+                    font-weight: 500;
+                    font-family: "Oswald", sans-serif;
+                    font-size: 58px;
+                    letter-spacing: 5.1px;
+                    line-height: 72px;
+                    text-transform: uppercase;
+                    text-align: center; } }
+                @media (min-width: 1280px) {
+                    .blog { 
+                        padding-top: 192px;
+                        padding-bottom: 192px; }
+                        .blog__title, .project__title, .works__title {
+                            margin-bottom: 88px; } }
+                @media (min-width: 1024px) {
+                    .blog { 
+                        padding-top: 192px;
+                        padding-bottom: 192px; }
+                        .blog__title, .project__title, .works__title {
+                            margin-bottom: 72px; } }
+                @media only screen and (min-width: 768px) {
+                    .blog { 
+                        padding-top: 136px;
+                        padding-bottom: 136px; }
+                        .blog__title, .project__title, .works__title {
+                            margin-bottom: 32px; } }

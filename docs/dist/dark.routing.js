@@ -73,7 +73,7 @@ const DarkMode = {
 						<div class="container">
 							<div class="header__content">
 								<div class="home__content__title">
-									<h2 class="home__content-title home__content-title--dark">
+									<h2 class="home__content-title home__content-title--dark" >
 										{{ intro }}
 									</h2>
 								</div>
@@ -532,7 +532,7 @@ const DarkMode = {
 						pJ$.move.speed = '6',
 						addClass(target, $py.notice.default.font_d), addClass(target, $py.notice.default.edge_d)
 					) : ( target === el ) )	
-			}).catch( error => { console.log('Request failed', error) } )	
+			}).catch( error => { console.log('Request failed', error) } )
     	},
     	shutdownHover: function({ target }) { let pJ$ = window.pJSDom[0].pJS.particles
     		fetch(_Fetch.Store).then(status).then(json).then( $py => { var self = this; let el = document.querySelector('.btn-contacts')
@@ -588,9 +588,7 @@ const DarkMode = {
         		removeClass(document.querySelector('.name__label'), "labelMove--js"),
         		removeClass(document.querySelector('.email__label'), "labelMove--js"),
         		removeClass(document.querySelector('.message__label'), "labelMove--js")
-        	):(false)
-	    	
- 			
+        	):(false)	    				
         }    	
  	}
 }

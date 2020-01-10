@@ -1,4 +1,9 @@
 
+var eventHub = new Vue()
+
+eventHub.$on('test', msg => {
+	console.log(msg)
+})
 
 const bar = document.querySelector('.bar')
 const btnPortfolio = 'btn-portfolio'
